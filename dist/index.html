@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Mountain Landing</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="img/Logo.jpg">
+	<link rel="shortcut icon" href="img/favicon/favico.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="">
+
+	<!-- Template Basic Images End -->
+
+	<!-- Bootstrap (latest) Grid Styles Only -->
+	<style>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:hover,a:focus{color:#23527c;text-decoration:underline}a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role="button"]{cursor:pointer}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.row{margin-left:-15px;margin-right:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs,.visible-sm,.visible-md,.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}table.visible-xs{display:table !important}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width:767px){.visible-xs-block{display:block !important}}@media (max-width:767px){.visible-xs-inline{display:inline !important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block !important}table.visible-sm{display:table !important}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block !important}table.visible-md{display:table !important}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width:1200px){.visible-lg{display:block !important}table.visible-lg{display:table !important}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width:1200px){.visible-lg-block{display:block !important}}@media (min-width:1200px){.visible-lg-inline{display:inline !important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width:767px){.hidden-xs{display:none !important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none !important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none !important}}@media (min-width:1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table !important}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}</style>
+
+	<!-- Header CSS (first screen styles from header.min.css) - inserted in the build of the project -->
+	<style>.header,body{position:relative}body{min-width:320px;line-height:1.6;overflow-x:hidden}body,html{width:100%;height:100%;font-family:"Open Sans",sans-serif;font-size:1em;margin:0;padding:0}.body__link{color:#fff;text-transform:uppercase;font-family:Raleway,sans-serif;font-size:14px;font-weight:700}.logo__text,.logo__text--blue{font-family:Bringin,sans-serif}.body__link--order{display:block;background-color:#36aeea;width:255px;margin-top:25px;-webkit-border-radius:6px;border-radius:6px;margin-left:38px;text-align:center;letter-spacing:2px;padding-top:20px;padding-bottom:20px;margin-bottom:41px}.body__link--about{margin:25px 25px 230px;font-size:12px;padding:11px;letter-spacing:1.6px;width:130px}.logo{font-size:29px;color:#95a5ad;text-transform:none}.logo__text--blue{color:#36aeea}.header{padding-bottom:147px;overflow:hidden;background-image:url(img/header-bg.jpg);background-size:cover;background-position:50% 50%;z-index:1}.header__man{background-image:url(img/bg-guy.png);background-size:100%;z-index:2;width:529px;height:629px;position:absolute;left:45%;bottom:0}.header__list{vertical-align:middle;text-transform:uppercase;list-style:none;margin:5px 0 0 65px;padding:32px 0 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;font-family:'Open Sans',sans-serif;font-weight:700;font-size:12px;float:left;letter-spacing:.2px}.header__list.active{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-shadow:0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);box-shadow:0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)}.header__list a{color:#9daeb6}.header__list a:hover{color:#36aeea}.list__item{margin-right:24px;vertical-align:middle}.list__item:last-of-type{margin-right:0}.link,.link:focus,.link:hover,.linkactive{text-decoration:none}.nav{height:88px;-webkit-transition:all .3s ease;transition:all .3s ease;background-color:rgba(255,255,255,.7)}.nav__logo{float:left;margin-top:22px;margin-left:18px;font-weight:400;letter-spacing:-1px}.sticky{position:fixed;z-index:12;width:100%;background-color:rgba(255,255,255,.9)}.header__link--call{float:right;text-transform:uppercase;font-family:Raleway,sans-serif;font-size:14px;font-weight:700;color:#36aeea;display:block;border:3px solid #36aeea;-webkit-border-radius:5px;border-radius:5px;padding:10px 45px;margin-top:25px}.moto__wrapper{border:4px solid #fff;border-bottom-color:transparent;margin-left:5px;position:relative;margin-top:138px}.moto__wrapper p{font-weight:400;font-size:18px;color:rgba(255,255,255,.75);margin-right:56%;position:relative;margin-top:6px;padding-left:39px;line-height:1.6em;text-transform:none}.moto{color:#fff;font-size:50px;line-height:.6em;letter-spacing:6px;margin-top:10px;padding:30px 30px 0 35px;margin-bottom:0}.moto__borderTop{position:absolute;width:100%;heigth:2px;border:1px solid #fff;bottom:0;z-index:2}.moto span{font-size:66px;line-height:.9em;letter-spacing:1.3px;text-transform:none}.body__section{position:relative;overflow:hidden}.body__header{text-transform:uppercase;font-size:20px;font-weight:700}.body__header--about{margin-left:20px;letter-spacing:1.9px}.body__header--about:before{margin-top:202px;margin-left:0;margin-bottom:35px;display:block;content:'';background-image:url(img/waves.png);width:92px;height:8px;background-size:cover}.body__header--offer{letter-spacing:1.7px}.body__header--feedback,.body__header--gallery,.body__header--scheme{text-align:center;letter-spacing:3px}.body__header--offer:before{margin-top:140px}.body__header--scheme{margin:0 0 0 39px;font-size:30px}.body__header--scheme:before{margin:68px auto 23px}.body__header--circle{text-transform:none;font-weight:900;font-size:16px;text-align:center;margin-top:26px;margin-left:26px;margin-bottom:0}.body__header--travel{margin:0 auto 87px;font-size:30px;color:#000}.body__header--travel:before{margin:11px auto 22px}.body__header--gallery{margin-bottom:60px;text-transform:uppercase;font-size:30px;margin-top:70px;padding-left:18px}.body__header--gallery:before{margin:11px auto 22px}.body__header--feedback{margin:0 0 75px;padding:0 0 0 35px;font-size:30px}.body__header--feedback:before{margin:73px auto 22px;padding-left:10px}.body__img{max-width:100%}.body__img--about-guys{position:absolute;top:-10%;z-index:2;left:92px;width:806px;height:570px;max-width:150%}.body__img--about-legs{position:relative;z-index:3;top:277px;left:-10px}.body__description{font-size:14px;color:#949494;font-weight:400;font-family:'Open Sans',sans-serif}.body__description--about{margin-left:22px;margin-right:50px;letter-spacing:.26px;line-height:1.9em}.body__section--about{background-image:url(img/about-bg.png);background-size:cover;background-position:40% 50%;background-repeat:no-repeat}</style>
+
+	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+	<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)};function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n};function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Raleway:400,700,800,900|Roboto:300,400,900" rel="stylesheet">
+
+	<!-- Load Fonts CSS Start -->
+	<script>
+		loadCSS( "css/fonts.min.css?ver=1.0.0", false, "all" ); // Loading fonts, if the site is located in a subfolder
+		// loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" ); // Loading fonts, if the site is at the root
+
+	</script>
+	<!-- Load Fonts CSS End -->
+
+	<!-- Load Custom CSS Start -->
+	
+	<script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
+	<script>loadCSS( "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", false, "all" );</script>
+	<script>loadCSS( "css/jquery.fancybox.css", false, "all" ); // fancybox plugin</script>
+
+
+
+
+	<!-- Load Custom CSS End -->
+
+	<!-- Load Custom CSS Compiled without JS Start -->
+	<noscript>
+		<link rel="stylesheet" href="css/fonts.min.css">
+		<link rel="stylesheet" href="css/main.min.css">
+		<link rel="stylesheet" href="css/jquery.fancybox.css">
+
+	</noscript>
+	<!-- Load Custom CSS Compiled without JS End -->
+
+	<!-- Custom Browsers Color Start -->
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content=" #0095DC">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content=" #0095DC">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content=" #0095DC">
+	<!-- Custom Browsers Color End -->
+
+</head>
+
+<body class="body">
+<nav class="header__nav nav">
+    <div class="container">
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+        </div>
+        <div class="nav__logo logo">
+			<span class="logo__text">
+				<span class=" logo__text--blue">
+					Moun
+				</span>
+				tains
+			</span>
+        </div>
+        <ul class="list header__list">
+            <li class="list__item"><a class="link nav__link " href="#story">Our story</a></li>
+            <li class="list__item"><a class="link nav__link nav__link--active" href="#services">Services</a></li>
+            <li class="list__item"><a class="link nav__link " href="#work">Work</a></li>
+            <li class="list__item"><a class="link nav__link " href="#journal">Journal</a></li>
+            <li class="list__item"><a class="link nav__link " href="#contact">contact</a></li>
+            <li class="list__item"><a class="link nav__link " href="#work">work</a></li>
+            <li class="list__item"><a class="link nav__link " href="#journal">Journal</a></li>
+
+        </ul>
+        <a href="#" class="link header__link--call"><span class="hidden-992">Call us</span> <i class="hidden-lg"></i></a>
+    </div>
+</nav>
+<header class="body__header header">
+    <div class="header__man">
+
+    </div>
+
+
+
+
+
+    <div class="container">
+
+    <div class="row">
+        <div class="col-sm-12 col-xs-12">
+            <div class="moto__wrapper">
+                <h2 class="moto header__moto">
+                    TRAVEL WITH US <br>
+                    <span class="logo__text--blue"> to the Mountains</span>
+                </h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidid
+                </p>
+                <a href="#" class="link body__link body__link--order">order now</a>
+            <div class="moto__borderTop">
+
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</header>
+<section id="story" class="body__section section body__section--about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-sm-12">
+                <h2 class="body__header body__header--about">
+                        About us
+                </h2>
+                <p class="body__description body__description--about">
+                    Aliquam sed posuere urna, et gravida nisl. Praesent
+                    interdum nisl libero, pretium egestas purus eleifend
+                    vitae. Mauris suscipit vel lectus at luctus.
+                </p>
+                <a href="#" class="link body__link body__link--order body__link--about">read more</a>
+            </div>
+            <div class="col-md-7 col-sm-12">
+                <img class="body__img body__img--about-legs" src="img/about__legs.jpg" alt="beautiful photo of landscape">
+                <img class="body__img body__img--about-guys" src="img/about__guys.jpg" alt="beautiful photo of landscape and company">
+            </div>
+        </div>
+    </div>
+</section>
+<section id="journal" class="body__section body__section--journal">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="body__header body__header--about body__header--journal">
+                   Our journal
+                </h2>
+                <div class="section__container ">
+                    <div class="container__item container__item--image-first">
+
+                    </div>
+                    <div class="container__item container__item--first" >
+                        <h3> Love</h3>
+                        <h2>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</h2>
+                        <p>
+                            You know how to make best coffee in the universe? Or, maybe you’re very good in designing gloves? Tell everyone about your experience and skills.
+                            <br><br>
+                            <span class="item__number">01</span>
+                        </p>
+                    </div>
+                    <div class="container__item container__item--image-second"></div>
+                    <div class="container__item container__item--second">
+                        <h3> Tree</h3>
+                        <h2>Lorem ipsum dolor sit <br> amet, <span style="text-decoration: line-through;">consectetur</span>
+                            <br> adipisicing elit,</h2>
+                        <p>
+                            The way to a successful brand is hard, but always very interesting. Share the full story of your project – from the very first day until now.
+                            <br> <br>
+                            <span class="item__number">02</span>
+                        </p>
+                    </div>
+                    <div class="container__item container__item--image-third"></div>
+                    <div class="container__item container__item--third">
+                        <h3> Water</h3>
+                        <h2>LITTLE PIECES OF <br>  OUR PROUDNESS</h2>
+                        <p>
+                            What do you do better than your competitors? What are you proud of? What details and advantages of your product you want people to know about?
+                            <br> <br>
+                            <span class="item__number">03</span>
+                        </p>
+                    </div>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class=" body__section section body__section--offer">
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-sm-12">
+            <h2 class="body__header body__header--about body__header--offer">
+                Do you wanna go?
+            </h2>
+            <p>
+                Aliquam sed posuere urna, et gravida nisl. Praesent <br>
+                interdum nisl libero, pretium egestas purus eleifend vitae. Mauris suscipit vel lectus at luctus.
+            </p>
+            <form class="form" action="mail.php" method="post">
+                <input class="form__input" name="name" value="" placeholder="Your name:">
+                <input class="form__input" name="tel" placeholder="Your phone:">
+                <input class="form__input form__input--button" type="submit" value="Order now">
+            </form>
+            <p class="locked"> * Your data will not be transferred</p>
+        </div>
+    </div>
+</div>
+</section>
+<section class="scheme body__section section body__section--scheme">
+    <div class="container">
+        <div class="row ">
+            <div class="col-xs-12">
+                <h2 class="body__header body__header--about body__header--scheme">
+                    how we work
+                </h2>
+            </div>
+        </div>
+        <div class="row scheme__row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="scheme__circleNumber scheme__circleNumber--first">
+1
+                </div>
+                <div class="scheme__circlePoint scheme__circlePoint--first">
+                    <img src="img/scheme_first.png" alt="" style="width: 121px">
+                </div>
+                <h3 class="body__header body__header--circle">Lorem ipsum dolor sit </h3>
+                <p class="scheme__circleDescription">amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="scheme__circleNumber scheme__circleNumber--second">
+2
+                </div>
+                <div class="scheme__circlePoint scheme__circlePoint--second">
+                    <img src="img/scheme_second.png" alt="" style="width: 121px">
+                </div>
+                <h3 class="body__header body__header--circle">Lorem ipsum dolor sit </h3>
+                <p class="scheme__circleDescription">amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="scheme__circleNumber scheme__circleNumber--third">
+3
+                </div>
+                <div class="scheme__circlePoint scheme__circlePoint--third">
+                    <img src="img/scheme_third.png" alt="" style="width: 121px">
+                </div>
+                <h3 class="body__header body__header--circle">Lorem ipsum dolor sit </h3>
+                <p class="scheme__circleDescription">amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="scheme__circleNumber scheme__circleNumber--forth">
+4
+                </div>
+                <div class="scheme__circlePoint scheme__circlePoint--forth">
+                    <img src="img/scheme_forth.png" alt="" style="width: 121px">
+                </div>
+                <h3 class="body__header body__header--circle">Lorem ipsum dolor sit </h3>
+                <p class="scheme__circleDescription">amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section  id="work" class="section body__section body__section--travel ">
+    <div class="container">
+        <div class="row">
+
+                <div class="section__container">
+                    <h2 class="body__header body__header--about body__header--travel">
+                        Travel with us
+                    </h2>
+                    <div class="section__container section__container--travel">
+                        <div class="container__item container__item--travel container__item--travel-first">
+                            <h4>Carpathian</h4>
+                            <p>
+                                Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                            </p>
+                            <span class="item__price item__price--old">
+                                3150$
+                            </span>
+                            <span class="item__price item__price--new">
+                                $793
+                            </span>
+                        </div>
+                        <div class="container__item container__item--travel container__item--travel-second">
+                            <h4>Alps</h4>
+                            <p>
+                                Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                            </p>
+                            <span class="item__price item__price--old">
+                                3150$
+                            </span>
+                            <span class="item__price item__price--new">
+                                $1893
+                            </span>
+                        </div>
+                        <div class="container__item container__item--travel container__item--travel-third">
+                            <h4>Pyrenees</h4>
+                            <p>
+                                Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                            </p>
+                            <span class="item__price item__price--old">
+                                3150$
+                            </span>
+                            <span class="item__price item__price--new">
+                                $2593
+                            </span>
+                        </div>
+                        <div class="container__item container__item--travel container__item--travel-forth">
+                            <h4>Rocky</h4>
+                            <p>
+                                Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                            </p>
+                            <span class="item__price item__price--old">
+                                3150$
+                            </span>
+                            <span class="item__price item__price--new">
+                                $2123
+                            </span>
+                        </div>
+                        <div class="container__item container__item--travel container__item--travel-fifth">
+                            <h4>Kavkaz</h4>
+                            <p>
+                                Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                            </p>
+                            <span class="item__price item__price--old">
+                                3150$
+                            </span>
+                            <span class="item__price item__price--new">
+                                $593
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+</section>
+<section id="services" class="section body__section body__section--gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="body__header body__header--about body__header--gallery">
+                    Gallery
+                </h2>
+                <div class="section__container section__container--gallery">
+                    <div class="container__item container__item--gallery">
+                        <img src="img/gallery-1.jpg" alt="" style="max-width: 100%; max-height: 100%">
+                    </div>
+                    <div class="container__item container__item--gallery">
+                        <img src="img/gallerry-2.jpg" alt="" style="max-width: 100%; max-height: 100%">
+                    </div>
+                    <div class="container__item container__item--gallery">
+                        <img src="img/gallery-3.jpg" alt="" style="max-width: 100%; max-height: 100%">
+                    </div>
+                    <div class="container__item container__item--gallery">
+                        <img src="img/gallery-4.jpg" alt="" style="max-width: 100%; max-height: 100%">
+                    </div>
+                    <div class="container__item container__item--gallery">
+                        <img src="img/gallery-5.jpg" alt="" style="max-width: 100%; max-height: 100%">
+                    </div>
+                    <div class="container__item container__item--gallery">
+                        <img src="img/gallerry-6.jpg" alt="" style="max-width: 100%; max-height: 100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section body__section body__section--partners">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section__container section__container--partners">
+                    <img src="img/partners/slack.png" alt="#" class="partners__logo">
+                    <img src="img/partners/adobe.png" alt="#" class="partners__logo">
+                    <img src="img/partners/google.png" alt="#" class="partners__logo">
+                    <img src="img/partners/facebook.png" alt="#" class="partners__logo">
+                    <img src="img/partners/spotify.png" alt="#" class="partners__logo">
+                    <img src="img/partners/nike.png" alt="#" class="partners__logo">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="#contact" class="section body__section body__section--feedback">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="body__header body__header--about body__header--feedback">
+                    Our clients say
+                </h2>
+            </div>
+            <div class="col-md-6 col-sm-12 feedback__item">
+                <img src="img/quote.png" alt="">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                </p>
+                <p class="feedback__name">
+                    <strong>Pavliv Yaroslav </strong> Web designer
+                </p>
+            </div>
+            <div class="col-md-6 col-sm-12 feedback__item">
+                <img src="img/quote.png" alt="">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                </p>
+                <p class="feedback__name feedback__name--john">
+                    <strong>John Scott  </strong> The Fringe
+                </p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-2 col-md-3"></div>
+            <div class="col-sm-8 col-md-6 col-xs-12">
+                <form class="form body__form--footer" action="mail.php" method="post">
+                    <h2 class="form__h2"> Contacts</h2>
+                    <p>Sign up for our newsletter to receive updates</p>
+                    <input class="form__input" name="name" value="" placeholder="Name:">
+                    <input class="form__input" name="tel" placeholder="Phone:">
+                    <input class="form__input" name="email" placeholder="Email:">
+                    <input class="form__input form__input--button" type="submit" value="Send">
+                </form>
+            </div>
+            <div class="col-sm-2 col-md-3"></div>
+        </div>
+    </div>
+</section>
+<footer class="body__footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <p class="rights">
+                    All rights reserved 2015
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <div class="footer__socials">
+                    <a href="#"> <img  src="img/twitter-ico.jpg" alt=""></a>
+                    <a href="#"><img src="img/facebook-ico.jpg" alt=""></a>
+                    <a href="#"><img src="img/vk-ico.jpg" alt=""></a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <p class="footer__tel">1 234 243 123</p>
+            </div>
+        </div>
+    </div>
+</footer>
+	<!-- Optimized loading JS Start -->
+
+
+	<script>
+		var scr = {"scripts":[
+		{"src" : "js/libs.min.js", "async" : false},
+		{"src" : "js/common.js", "async" : false}
+		]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+	</script>
+
+
+<!-- Optimized loading JS End -->
+
+</body>
+</html>
