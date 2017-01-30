@@ -1,0 +1,242 @@
+@import "bourbon"
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+  .section__container.section__container--gallery
+    height: auto
+    flex-direction: row
+    text-align: center
+    justify-content: center
+    .container__item--gallery
+      width: 25%
+  .container__item--travel.container__item
+    width: 180px
+    margin-right: 10px
+  .form
+    .form__input:nth-of-type(n),
+    .form__input:nth-of-type(2)
+      width: 32.5%
+  .container
+    .container__item h2
+      margin-top: 20px
+      line-height: 1em
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+  .body__section--about
+    padding-bottom: 20px
+    .body__header--about:before
+      margin-top: 70px
+  .body__img--about-legs
+    top: 0
+  .body__img--about-guys
+    width: 500px
+    height: auto
+    right: 10px
+    left: auto
+    top: auto
+    bottom: 10%
+    z-index: 1
+  .body__link--about
+    margin-bottom: 10px
+  .header__link--call
+    position: absolute
+    right: 10px
+    padding: 10px
+    .hidden-992
+      display: none
+    i:before
+      width: 20px
+      height: 20px
+      content: ''
+      background-image: url('../img/smartphone-call.png')
+      display: block
+      background-repeat: no-repeat
+      -webkit-background-size: cover
+      background-size: cover
+  .container__item.container__item--image-first
+    order: 1
+  .container__item.container__item--image-second
+    order: 4
+  .container__item.container__item--image-third
+    order: 5
+  .container__item.container__item--first
+    order: 2
+  .container__item.container__item--second
+    order: 3
+  .container__item.container__item--third
+    order: 6
+
+  .container__item.container__item--image-first,
+  .container__item.container__item--image-second,
+  .container__item.container__item--image-third,
+  .container__item.container__item--first ,
+  .container__item.container__item--second,
+  .container__item.container__item--third
+    width: calc(100% / 2)
+  .scheme__circleNumber
+    &:nth-of-type(2)
+      &:after
+        border: none
+
+  .container__item--travel.container__item
+    width: 200px
+    margin-right: 35px
+    background-repeat: no-repeat
+    margin-top: 20px
+  .nav__logo.logo
+    position: absolute
+    text-align: center
+    left: 45%
+    margin-left: 0
+  .header__list
+    top: 50px
+    font-size: 16px
+    background-color: #fff
+    padding: 20px 30px
+    margin-left: 0
+    display: none
+    flex-direction: column
+    position: absolute
+    z-index: 5
+    .list__item
+      border-bottom: 1px solid $dat_blue
+      margin-right: 0
+
+  .header__man
+    width: 300px
+    height: auto
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 851px)
+  /**/
+@media only screen and (max-width: 768px)
+  .section.body__section.body__section--partners
+    .section__container--partners
+      margin-right: 20px
+  .scheme__circlePoint
+    left: 18%
+@media only screen and (max-width : 692px)
+  .body__img--about-guys
+    position: absolute
+    margin: 0 auto
+    text-align: center
+    left: 10%
+    top: -50%
+    z-index: 5
+  .link.body__link.body__link--order.body__link--about
+    margin-bottom: 180px
+  .body__footer
+    text-align: center
+    .footer__tel
+      text-align: center
+
+@media only screen and (max-width : 580px)
+  form.form.body__form--footer
+    margin-left: 0
+  .section__container.section__container--gallery .container__item--gallery
+    width: 45%
+  .scheme__circlePoint
+    left: 12%
+  .form .form__input:nth-of-type(2), .form .form__input:nth-of-type(n)
+    width: 100%
+  .header__moto
+      letter-spacing: 3px
+  form.form.body__form--footer
+    margin-left: 0 !important
+  .moto__wrapper p
+    margin-right: 10%
+  .container__item.container__item--image-first,
+  .container__item.container__item--image-second,
+  .container__item.container__item--image-third,
+  .container__item.container__item--first ,
+  .container__item.container__item--second,
+  .container__item.container__item--third
+    width: 100%
+    background-repeat: no-repeat
+    background-position: 50% 0
+    box-shadow: none
+  .container__item.container__item--image-first
+    order: 1
+  .container__item.container__item--image-second
+    order: 3
+  .container__item.container__item--image-third
+    order: 5
+  .container__item.container__item--first
+    order: 2
+  .container__item.container__item--second
+    order: 4
+  .container__item.container__item--third
+    order: 6
+  .section__container--travel
+    justify-content: center
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 380px)
+  .header__moto
+    font-size: 30px !important
+    letter-spacing: 1px !important
+  .moto span
+      font-size: 55px !important
+  .body__link--order
+    width: 200px
+  .container__item
+    padding: 0 !important
+  .container__item p
+    margin: 0 30px 0 0 !important
+  .container .container__item h2
+    margin: 20px !important
+  .container__item.container__item--image-first,
+  .container__item.container__item--image-second,
+  .container__item.container__item--image-third
+    width: 260px !important
+    height: 260px
+  .scheme__circlePoint
+    left: -5% !important
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+  /**/
+
+@media only screen and (min-width : 992px)
+  /**/
+
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
+/*additional media querry */
+
+@media only screen and (min-width: 992px)
+  .hamburger-menu
+    display: none
+
+@media only screen and (min-width: 850px)
+  /**/
+
+@media only screen and (max-width: 660px)
+  /**/
+
+@media only screen and (max-width: 405px)
+  /**/
+

@@ -1,0 +1,463 @@
+@import "bourbon"
+@import "vars"
+@import "libs"
+
+//Custom styles here
+
+@import "media"
+
+
+.body__header--journal
+  margin: 0
+  text-align: center
+  padding: 0
+  font-size: 30px
+  margin-left: 37px
+  letter-spacing: 3px
+  margin-top: 40px
+  &:before
+    text-align: center
+    margin: 72px auto 23px auto
+.body__section--journal
+  padding-bottom: 90px
+.section__container
+  display: flex
+  margin-top: 66px
+  flex-wrap: wrap
+  margin-left: 20px
+  margin-right: -30px
+  text-align: center
+  &--travel
+    margin: 0
+    padding: 0
+  &--gallery
+    margin: 0
+    padding: 0
+    flex-direction: column
+    height: 650px
+  &--partners
+    justify-content: space-between
+.container__item
+  width: calc(33%)
+  padding-right: 30px
+  padding-left: 30px
+  height: 380px
+  margin: 0
+  position: relative
+  box-shadow: 0px 0px 21px 0px rgba(6, 6, 6, 0.13)
+  &--gallery
+    box-shadow: none
+    height: auto
+    width: auto
+    margin: 4px
+    padding: 2px
+
+  &--travel
+    width: 200px
+    padding: 0
+    margin: 0
+    box-shadow: none
+    border-radius: 5px
+    margin-right: 35px
+    padding-top: 106px
+    &:nth-of-type(1)
+      background-image: url('../img/travel-1.jpg')
+    &:nth-of-type(2)
+      background-image: url('../img/travel-2.jpg')
+    &:nth-of-type(3)
+      background-image: url('../img/travel-3.jpg')
+    &:nth-of-type(4)
+      background-image: url('../img/travel-4.jpg')
+    &:nth-of-type(5)
+      background-image: url('../img/travel-5.jpg')
+      margin-right: none
+  span.item__number
+    font-style: italic
+    font-family: sans
+    font-size: 14px
+    line-height: 3em
+  h2
+    font-weight: 700
+    font-size: 16px
+    text-transform: uppercase
+    letter-spacing: 2.44px
+    margin-top: 45px
+  h3
+    margin-top: 43px
+    letter-spacing: 2px
+    font-weight: 700
+    font-size: 11px
+    text-transform: uppercase
+    color: $dat_blue
+  p
+    margin: 15px 21px 0 21px
+
+    font-size: 14px
+  &--second
+    span.item__number
+    h2
+      margin-left: 10px
+    h3
+
+    p
+      margin-right: 24px
+      margin-left: 24px
+  &--third
+    span.item__number
+    h2
+      margin-left: 19px
+    h3
+
+    p
+      margin: 42px 21px 0 21px
+  &--image
+    -webkit-background-size: cover
+    background-size:  cover
+    background-position: 50% 50%
+    position: relative
+    &-first
+      background-image: url('../img/post_first.jpg')
+      position: relative
+      &:after
+        content: ''
+        background-image: url('../img/post_icon_love.png')
+        width: 81px
+        height: 81px
+        z-index: 4
+        display: block
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-left: -40px
+        margin-top: -40px
+
+    &-second
+      position: relative
+      background-image: url('../img/post_secondf.jpg')
+      &:after
+        content: ''
+        background-image: url('../img/post_icon_drop.png')
+        width: 81px
+        height: 81px
+        z-index: 4
+        display: block
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-left: -40px
+        margin-top: -40px
+
+    &-third
+      position: relative
+      background-image: url('../img/post_third.jpg')
+      &:after
+        content: ''
+        background-image: url('../img/post_icon_lead.png')
+        width: 81px
+        height: 81px
+        z-index: 4
+        display: block
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-left: -40px
+        margin-top: -40px
+
+
+.body__section--offer
+  padding-bottom: 243px
+  background-image: url('../img/offer-bg.jpg')
+  -webkit-background-size: cover
+  background-size: cover
+  background-position:  54% 50%
+  p
+    margin-top: -4px
+    margin-left: 21px
+    letter-spacing: 0.1px
+  p.locked
+    margin: 0
+    font-size: 14px
+    color: $dat_blue
+    margin-top: 18px
+    margin-left: 20px
+    letter-spacing: 0.3px
+    &:before
+      margin-right: 10px
+      content: ''
+      width: 16px
+      height: 16px
+      display: block
+      float: left
+      background-image: url('../img/lock.png')
+      -webkit-background-size: 100%
+      line-height: 1em
+      background-size: 100%
+
+.form
+  margin-top: 28px
+  margin-left: 21px
+  background-color: #fff
+  max-width: 855px
+  &__input
+    width: 299px
+    padding: 18px
+    border: none
+    &:first-of-type
+      border-right: 1px solid #ebebeb
+    &:nth-of-type(2)
+      width: 320px
+    &--button
+      width: 225px
+      font-weight: 700
+      text-transform: uppercase
+      font-size: 16px
+      color: #fff
+      letter-spacing: 2px
+      border-radius: 7px
+      padding: 16px
+      background-color: $dat_blue
+
+.scheme
+  padding-left: 20px
+  padding-right: 20px
+  &__row
+    margin-top: 62px
+    padding-left: 10px
+  &__circleNumber
+    border-radius: 50%
+    width: 48px
+    height: 48px
+    border: 4px solid $dat_blue
+    text-align: center
+    margin-left: 46%
+    color: $dat_blue
+    font-weight: 700
+    line-height: 40px
+    position: relative
+    background-color: #fff
+    &--forth,
+    &--third
+      margin-left: 48%
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      height: 50px
+      width: 1px
+      border-right: 1px dashed #f0f3f6
+      bottom: -79px
+      left: 48%
+      transform: scaleY(2)
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      width: 50px
+      height:  1px
+      border-top: 1px dashed #f0f3f6
+      top: 49%
+      left: calc(48px*3)
+      transform: scaleX(5)
+    &--forth
+      &:after
+        display: none
+  &__circlePoint
+    border-radius: 50%
+    width: 180px
+    height: 180px
+    background-color: #f0f3f6
+    margin-left: 19%
+    margin-top: 55px
+    position: relative
+    &--forth,
+    &--third
+      margin-left: 22%
+      img
+        position: absolute
+        top: 34px
+        left: 29px
+    img
+      position: absolute
+      top: 31px
+      left: 31px
+  &__circleDescription
+    text-align: center
+    font-family: 'Roboto', sans-serif
+    font-weight:  300
+    font-size: 16px
+    padding: 0
+    margin-top: 0
+    margin-left: 30px
+.body__section--travel
+  background-image: url('../img/travel-bg.jpg')
+  -webkit-background-size: cover
+  background-size: cover
+  background-position: 50% 50%
+  padding-bottom: 480px
+  color: #fff
+  h4
+    font-size: 28px
+    text-align: left
+    margin-left: 20px
+    font-weight: 400
+    text-transform: capitalize
+    letter-spacing: 0
+    margin-bottom: 0
+  p
+    text-align: left
+    line-height: 1.4em
+    margin-top: 12px
+    font-weight: 400
+    font-size: 16px
+    height: 40px
+    overflow: hidden
+span.item__price
+  position: absolute
+  bottom: 12px
+  font-size: 18px
+  &--old
+    text-decoration: line-through
+    left: 25px
+  &--new
+    font-size: 26px
+    font-weight: 800
+    right: 10px
+    bottom: 8px
+.body__section--gallery
+  padding-bottom: 80px
+.body__section--partners
+  background-color: #f8f9fa
+  padding-bottom: 60px
+.feedback__item
+  img
+    margin-left: 30px
+  p
+    margin-left: 30px
+    margin-top: 10px
+    font-size:  18px
+    line-height: 1.75em
+  p.feedback__name
+    color: $dat_blue
+    line-height: 5em
+    font-size: 16px
+    padding-left: 88px
+    background-image: url('../img/Yaroslav.png')
+    background-position: 4px 65%
+    background-repeat: no-repeat
+    -webkit-background-size:
+    background-size: 69px
+  p.feedback__name--john
+      background-image: url('../img/John.png')
+form.form.body__form--footer
+  padding-right: 30px
+  padding-left: 30px
+  max-width: 515px
+  margin-left: 40px
+  text-align: center
+  border-radius: 5px
+  margin-top: 163px
+  background-color: rgba( 255,255,255,0.4)
+  padding-bottom: 50px
+  .form__input
+    width: 100%
+    height: 60px
+    border-radius: 5px
+    margin-top: 19px
+    &--button
+     height: 70px
+  .form__input:first-of-type
+    border: none
+
+
+.body__section--feedback
+  background-image: url('../img/footer-bg.jpg')
+  -webkit-background-size: cover
+  background-size: cover
+  background-position: 50% 100%
+  padding-bottom: 120px
+
+  .form__h2
+    letter-spacing: 3px
+    color: $dat_blue
+    font-weight: 700
+    text-transform: uppercase
+    text-align: center
+    font-size: 36px
+    padding-top: 22px
+    margin-bottom: 0
+    margin-top: 0
+  p
+    color: #5c8898
+    margin-top: 4px
+.body__footer
+  background-color: #3b5157
+  color: #75a3b3
+  font-size: 18px
+  .rights
+    margin: 29px 25px
+.footer__tel
+  font-family: 'Roboto', sans-serif
+  font-weight: 900
+  font-size: 27px
+  margin-bottom:  0
+  text-align: right
+.footer__socials
+  line-height: 5em
+  text-align: center
+
+
+
+.hamburger-menu
+  position: absolute
+  top: 30px
+  left: 30px
+  margin: auto
+  width: $bar-width
+  height: $bar-height + $bar-spacing*2
+  cursor: pointer
+
+.bar,
+.bar:after,
+.bar:before
+  width: $bar-width
+  height: $bar-height
+
+
+.bar
+  position: relative
+  transform: translateY($bar-spacing)
+  background: #36AEEB
+  transition: all 0ms 300ms
+  &.animate
+    background: #fff
+
+
+
+.bar:before
+  content: ""
+  position: absolute
+  left: 0
+  bottom: $bar-spacing
+  background: #36AEEB
+  transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+
+.bar:after
+  content: ""
+  position: absolute
+  left: 0
+  top: $bar-spacing
+  background: #36AEEB
+  transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+
+.bar.animate:after
+  top: 0
+  transform: rotate(45deg)
+  transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+
+.bar.animate:before
+  bottom: 0
+  transform: rotate(-45deg)
+  transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
